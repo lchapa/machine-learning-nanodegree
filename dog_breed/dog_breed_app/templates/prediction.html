@@ -1,0 +1,54 @@
+$def with (dog_name, dog_breed, dog_file_name, dog_status)
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="mar., 20 feb. 2018 03:11:32 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title></title>
+    
+    <!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+      <table>
+        <tr>
+          <td>
+                <br/>
+                <br/>
+                <br/>
+              $if dog_status == 0: 
+                Hey! No Dog was found in the pic. However a human face, named: <b>$dog_name</b>, on which we best our best catch, and the dog-breed like is:  <b>$dog_breed</b>
+                <br/>
+                Enjoy and have fun...
+              $if dog_status < 0: 
+                Sorry, we could not find any dog in your picture. Neither a human face to try on.
+              $if dog_status > 0: 
+                Your dog $dog_name is a kind of: $dog_breed
+                <br/>
+                <br/>
+                <br/>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <img src="/$dog_file_name" alt="Dog" height="128" width="128">    
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>
+            <a href="/dog-breed/new">Try one more prediction?</a>>
+          </td>
+        </tr>
+      </table>
+
+		<br/>
+  </body>
+</html>
